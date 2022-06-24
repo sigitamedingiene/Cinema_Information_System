@@ -1,23 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Repository.Entities
 {
     public class Client
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string SurName { get; set; }
         public int Year { get; set; }
         public string Email { get; set; }
-        public int MovieId { get; set; }
-        public Client(int id, string name, string surName, int year, string email, int movieId)
+        public Guid MovieId { get; set; }
+        public Movie movie { get; set; }
+        public Client(Guid id, string name, string surName, int year, string email)
         {
             Id = id;
             Name = name;
             SurName = surName;
             Year = year;
             Email = email;
-            MovieId = movieId;
         }
     }
 }

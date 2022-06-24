@@ -1,19 +1,20 @@
 ﻿
+using System;
 
 namespace Repository.Entities
 {
     public class Auditorium
     {
-        public int Id { get; set; }
-        public string MovieId { get; set; }
+        public Guid Id { get; set; }
+        public Guid MovieId { get; set; }
+        public Movie movie { get; set; }
         public string Owner { get; set; }
         public string City { get; set; }
         public string Adress { get; set; }
         public int PlaceCount { get; set; }
-        public Auditorium(int id, string movieId, string owner, string city, string adress, int placeCount)
+        public Auditorium(Guid id, string owner, string city, string adress, int placeCount)
         {
             Id = id;
-            MovieId = movieId;
             Owner = owner;
             City = city;
             Adress = adress;

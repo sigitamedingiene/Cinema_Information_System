@@ -8,16 +8,18 @@ namespace Repository.Entities
 {
     public class Movie
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
         public string CompanyCreated { get; set; }
-        public Movie(int id, string name, string type, string companyCreated)
+        public DateTime ShowTime { get; set; }
+        public Movie(Guid id, string name, string type, string companyCreated, DateTime showTime)
         {
             Id = id;
             Name = name;
             Type = type;
             CompanyCreated = companyCreated;
+            ShowTime = showTime;
         }
 
     }
